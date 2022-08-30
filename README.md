@@ -1,0 +1,1 @@
+Strona-portfolio pokazująca część moich obecnych umiejętności. Zamieszczane na niej będą przyszłe postępy.

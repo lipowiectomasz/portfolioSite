@@ -1,0 +1,24 @@
+
+.icon-phone:before { content: '\e800'; } /* '' */
+.icon-mail:before { content: '\e801'; } /* '' */
+.icon-linkedin:before { content: '\e802'; } /* '' */
+.icon-linkedin-circled:before { content: '\e803'; } /* '' */
+.icon-contacts:before { content: '\e804'; } /* '' */
+.icon-vcard:before { content: '\e805'; } /* '' */
+.icon-th-large:before { content: '\e806'; } /* '' */
+.icon-th-list:before { content: '\e807'; } /* '' */
+.icon-info:before { content: '\e808'; } /* '' */
+.icon-up:before { content: '\e809'; } /* '' */
+.icon-linkedin-circled-1:before { content: '\f05b'; } /* '' */
+.icon-linkedin-1:before { content: '\f05c'; } /* '' */
+.icon-info-circled:before { content: '\f085'; } /* '' */
+.icon-info-circled-alt:before { content: '\f086'; } /* '' */
+.icon-github-circled-1:before { content: '\f09b'; } /* '' */
+.icon-blank:before { content: '\f0c8'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-angle-right:before { content: '\f105'; } /* '' */
+.icon-user-circle:before { content: '\f2bd'; } /* '' */
+.icon-user-circle-o:before { content: '\f2be'; } /* '' */
+.icon-user-o:before { content: '\f2c0'; } /* '' */
+.icon-github-squared:before { content: '\f300'; } /* '' */
+.icon-linkedin-rect:before { content: '\f312'; } /* '' */

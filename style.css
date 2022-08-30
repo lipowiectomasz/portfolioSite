@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    margin: 0;
+    
+}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    background-color: white;
+    cursor: default;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+
+}
+header{
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background-color: #1b1b1b;
+    cursor: default;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+}
+#headerContainer{
+    width: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+    height: 100%;
+    width: 30%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#lastName{
+    color: rgb(112, 21, 21);
+}
+#headerNav{
+    font-weight: 900;
+    font-size: 20px;
+    width: 70%;
+    height: 100%;
+}
+#headerNav ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#headerNav li{
+    margin: 0 15px 0 15px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#headerNav li a{
+    color: white;
+}
+#headerNav li a:hover{
+    color: red;
+}
+#main{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#introduction{
+    color: black;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 960px;
+}
+#introduction div{
+    width: 75%;
+}
+#introduction div p{
+    font-weight: 100;
+    font-size: 27px;
+}
+#introduction div p:first-child{
+    display: inline;
+    font-weight: 900;
+    font-size: 45px;
+    margin-bottom: 2%;
+    background-image: linear-gradient(to right, black, #440031);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#but{
+    height: 100px;
+    width: 100px;
+    background-color: #540000;
+}
+#technologies{
+    height: 90vh;
+    width: 960px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+#technologies p:first-child{
+    padding-top: 2%;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+#diagrams{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.techElement{
+    position: relative;
+    width: 100%;
+    margin: 5% 1% 0 1%;
+    background-image: linear-gradient(to right, black, rgb(99, 0, 0));
+    padding: 3px;
+    border-radius: 14px;
+    box-shadow: 5px 5px 20px gray;
+}
+.techDiagram{
+    height: 100%;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.techDiagramBorder{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    padding-top: 14%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #ffffff;
+   
+}
+.mainDiagramDot{
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.diagramDot{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.diagramLine{   
+    display: block; 
+    width: 1px;
+    height: 60px;
+}
+.webTech{
+    height: 100%;
+}
+.techList{
+    padding-left: 10px;
+}
+.techList li{
+    height: 75px;
+}
+.techList li:first-child{
+    height: 85px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.web{
+    background-color: #360809;
+}
+.prog{
+    background-color: #540000;
+}
+.minicomputers{
+    background-color: #270C0D;
+}
+#projects{
+    width: 960px;
+    padding-bottom: 5%;
+    overflow: hidden;
+}
+#projectsHeader,#contactHeader,#linksHeader{
+    padding-top: 3%;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+.projectLeftBorder{
+    position: relative;
+    left: -30%;
+    background-image: linear-gradient(to right, black, rgb(99, 0, 0));
+    padding: 3px;
+    border-radius: 35px;
+    margin-top: 3%;
+    box-shadow: 5px 5px 20px gray;
+    overflow: hidden;
+}
+
+.projectRightBorder{
+    position: relative;
+    right: -30%;
+    background-image: linear-gradient(to right, black, rgb(99, 0, 0));
+    padding: 3px;
+    border-radius: 35px;
+    margin-top: 3%;
+    box-shadow: 5px 5px 20px gray;
+    overflow: hidden;
+}
+.projectLeft{
+    background-color: white;
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: right;
+}
+.projectRight{
+    height: 100%;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: left;
+}
+.projectContainer{
+    width: 700px;
+    height: 90%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.projectContainer p:first-child{
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 3%;
+}
+.projectText{
+    width: 80%;
+    text-indent: 10px;
+    font-size: 16px;
+    color: #566A5E;
+    text-align: center;
+}
+#projectPhotoContainer{
+    position: relative;
+    height: 434px;
+    width: 500px;
+}
+.projectPhoto{
+    position: relative;
+    height: 384px;
+    width: 450px;
+    transition: transform 1s;
+	transform-style: preserve-3d;
+}
+.projectPhoto.projectPhotoFlip{
+    transform: rotateY(180deg);
+}
+.projectPhotoOne{
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+    z-index: 1;
+}
+.projectPhotoTwo{
+    z-index: 1;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+#projectPhotoDotPointer{
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    bottom: 70px;
+}
+.projectPhotoDotPointerContainer{
+    position: relative;
+    height: 70px;
+    width: 70px;
+}
+.projectPhotoDotBackgroundBox{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: gray;
+    opacity: 0.05;
+    z-index: 3;
+}
+.projectPhotoDotBox{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.projectPhotoDot{
+    position: relative;
+    opacity: 1;
+    height: 8px;
+    width: 8px;
+    background-color: gray;
+    border-radius: 50%;
+    z-index: 4;
+}
+.projectPhotoDotChange.projectPhotoDot{
+    transition: transform 1s;
+    transform: scale(1.8);
+    opacity: 1;
+}
+#techSliderSection{
+    width: 100%;
+}
+#techSlider{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#techSliderContainerBorder{
+    z-index: 1;
+    width: 960px;
+    padding: 5px;
+    background-image: linear-gradient(to right, black, rgb(99, 0, 0));
+}
+#slideLine{
+    background-image: linear-gradient(to right, black, rgb(99, 0, 0));
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    z-index: 0;
+}
+#techSliderContainer{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 960px;
+    background-image: linear-gradient(to right, #272727 ,#3f2d3a);
+
+}
+.tech{
+    display: flex;
+    position: relative;
+    min-width: 110px;
+    max-width: 110px;
+    height: 70px;
+    background-image: linear-gradient(to right, black, rgb(99, 0, 0));
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.tech:hover{
+    background-color: rgb(29, 223, 158);
+    font-weight: bold;
+}
+.slide{
+    width: 105px;
+    height: 65px;
+    background-color: #1b1b1b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#contact{
+    width: 960px;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#contactContainer{
+    width: 100%;
+    height: 100%;
+    /* border-radius: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#contactContainer div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+#contactContainer div:hover{
+    color: rgb(112, 21, 21);
+}
+#links{
+    width: 960px;
+    height: 30vh;
+}
+#linksContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height:50%;
+}
+#linksContainer a:hover{
+    transform: scale(1.1);
+    color:  rgb(112, 21, 21);
+}
+
+footer{
+    
+    height: 200px;
+    width: 100%;
+    background-color: #1b1b1b;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#footerContainer{
+    height: 100%;
+    width: 960px;
+    display: flex;
+    flex-direction: row;
+}
+#socialMedia{
+    color: white;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contactElement{   
+    margin-left: 20%;
+}
+.contactElement a{
+    color: white;
+}   
+.contactElement a:hover{
+    color:  rgb(112, 21, 21);
+}   
+#mark{
+    text-align: center;
+    color: gray;
+    padding-bottom: 2%;
+}
+.techIcons{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 20px 0;
+    font-size: 13px;
+}
+.icon{
+    margin: 0 5px 0 5px;
+    height: 25px;
+    width: 90px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.iconJs{
+    background-color: #F0EB8A;
+}
+.iconHTML{
+    background-color:#DC5F5F;
+}
+.iconCSS{
+    background-color: #415798;
+}
+.iconCpp{
+    background-color: #5B84FF;
+}
+.iconRasp{
+    background-color: #DC5F9B;
+}
+.iconC{
+    background-color: #24ABFF;
+}
+.iconArduino{
+    background-color: #A3FFBC;
+}
+.iconPhp{
+    background-color: #C549FF;
+}
+.projectLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 15px;
+}
+.liveDemo{
+    height: 40px;
+    width: 140px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1px solid;
+}
+.code{
+    margin: 5px 5px 5px 5px;
+    height: 40px;
+    width: 140px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.1px solid;
+}
+.projectLinks a{
+    position: absolute;
+    height: 40px;
+    width: 140px;
+}
+.code:hover,.liveDemo:hover{
+    color:  rgb(112, 21, 21);
+    font-weight: bold;
+}
+#goToTop{
+    color: white;
+    position: fixed;
+    right: 5%;
+    background-color: black;
+    z-index: 4;
+    bottom: 5%;
+    border-radius: 10px;
+}
