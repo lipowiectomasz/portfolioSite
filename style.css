@@ -12,7 +12,7 @@ body{
     cursor: default;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-
+    
 }
 header{
     position: fixed;
@@ -76,6 +76,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* overflow: hidden; */
 }
 #introduction{
     color: black;
@@ -125,6 +126,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 0 2% 0 2%;
 }
 .techElement{
     position: relative;
@@ -196,7 +198,7 @@ header{
     background-color: #270C0D;
 }
 #projects{
-    width: 960px;
+    width: 100%;
     padding-bottom: 5%;
     overflow: hidden;
 }
@@ -214,7 +216,8 @@ header{
     border-radius: 35px;
     margin-top: 3%;
     box-shadow: 5px 5px 20px gray;
-    overflow: hidden;
+    width: 100%;
+    /* overflow: hidden; */
 }
 
 .projectRightBorder{
@@ -225,7 +228,8 @@ header{
     border-radius: 35px;
     margin-top: 3%;
     box-shadow: 5px 5px 20px gray;
-    overflow: hidden;
+    width: 150%;
+    /* overflow: hidden; */
 }
 .projectLeft{
     background-color: white;
