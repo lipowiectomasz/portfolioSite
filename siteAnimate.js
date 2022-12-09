@@ -118,6 +118,7 @@ function preparePhotos(){
     $(".projectPhoto").click((e)=>{
         let target = e.target;
         target.parentElement.classList.toggle("projectPhotoFlip");
+        
         let photoDots = $(".projectPhotoDot");
         for(let dot of photoDots){
             dot.classList.toggle("projectPhotoDotChange");
@@ -227,6 +228,18 @@ function changeToPL(){
         })
         return inside;
     });
+
+    $("#fifthProject p:eq(0)").html("Sudoku");
+    $("#fifthProject p:eq(1)").html("Sudoku zrealizowane w Java z interfejsem graficznym JavaFx.");
+    projInside = $("#sixthProject .techIcons").children();
+    $("#sixthProject .techIcons").html(()=>{
+        let inside = "Technology:";
+        projInside.each((id,element)=>{
+            inside += element.outerHTML;
+        })
+        return inside;
+    });
+
     $("#contactHeader").html("Kontakt");
     $("#linksHeader").html("Linki");
 
@@ -305,6 +318,19 @@ function changeToENG(){
         })
         return inside;
     });
+
+    $("#fifthProject p:eq(0)").html("Sudoku");
+    $("#fifthProject p:eq(1)").html("Sudoku created with Java and JavaFx.");
+    projInside = $("#sixthProject .techIcons").children();
+    $("#sixthProject .techIcons").html(()=>{
+        let inside = "Technology:";
+        projInside.each((id,element)=>{
+            inside += element.outerHTML;
+        })
+        return inside;
+    });
+
+
     $("#contactHeader").html("Contact");
     $("#linksHeader").html("Links");
 

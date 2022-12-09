@@ -544,6 +544,9 @@ footer{
 .iconPhp{
     background-color: #C549FF;
 }
+.iconJava{
+    background-color: #fff652;
+}
 .projectLinks{
     display: flex;
     align-items: center;
