@@ -1,1 +1,3 @@
-Strona-portfolio pokazująca część moich obecnych umiejętności. Zamieszczane na niej będą przyszłe postępy.
+Portfolio site with my current progress.
+
+tomlip002.pl
