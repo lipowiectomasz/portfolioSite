@@ -14,7 +14,7 @@ $(document).ready(function(){
     prepareLinks();
     changeLanguageButton();
     $(document).scroll(function(){
-        if(Math.floor($("#technologies").position().top)*0.8<$(document).scrollTop()){
+        if(Math.floor($("#technologies").position().top)*0.7<$(document).scrollTop()){
             if(diagramVisibility==false){
                 showDiagrams();
             }
@@ -49,6 +49,20 @@ $(document).ready(function(){
     });     
 
 });
+
+const startNavHeight = parseInt($("#headerNav ul").css("height")) + 5;
+$("#headerNav ul li:eq(0)").click(() =>{
+    console.log("Menu handle");
+    const currentNavHeight = parseInt($("#headerNav ul").css("height"));
+
+    console.log(`CurrH: ${currentNavHeight}, StartH: ${startNavHeight}`);
+
+    const heightVal = (currentNavHeight < startNavHeight) ? "450px" : "75px";
+    $("#headerNav ul").animate({height: heightVal}, 500);
+    const marginVal = ( heightVal == "450px" ) ? "575px"  : "200px";
+    $("#main").animate({marginTop: marginVal},500);
+});
+
 function showDiagrams(){
     diagramVisibility = true;
     $("#firstDiagram").animate({
@@ -158,11 +172,13 @@ function prepareLinks(){
 function changeToPL(){
     $("#eng").css("background-color","transparent");
     $("#pl").css("background-color","white");
-    $("#headerNav li:eq(0)").html("Strona główna");
-    $("#headerNav li:eq(1)").html("Umiejętności");
-    $("#headerNav li:eq(2)").html("Projekty");
-    $("#headerNav li:eq(3)").html("Kontakt");
-    $("#headerNav li:eq(4)").html("Linki");
+
+    $("#headerNav li:eq(0)").html("Menu");
+    $("#headerNav li:eq(1)").html("Strona główna");
+    $("#headerNav li:eq(2)").html("Umiejętności");
+    $("#headerNav li:eq(3)").html("Projekty");
+    $("#headerNav li:eq(4)").html("Kontakt");
+    $("#headerNav li:eq(5)").html("Linki");
 
     $("#introduction p:eq(0)").html("Cześć, jestem Tomek");
     $("#introduction p:eq(1)").html("Jestem studentem na kierunku informatycznym. Moim zainteresowaniem jest programowanie. Swoje projekty hobbystycznie zamieszczam na niniejszej stronie.");
@@ -259,11 +275,14 @@ function changeToPL(){
 function changeToENG(){
     $("#pl").css("background-color","transparent");
     $("#eng").css("background-color","white");
-    $("#headerNav li:eq(0)").html("Home page");
-    $("#headerNav li:eq(1)").html("Skills");
-    $("#headerNav li:eq(2)").html("Projects");
-    $("#headerNav li:eq(3)").html("Contact");
-    $("#headerNav li:eq(4)").html("Links");
+    
+    $("#headerNav li:eq(0)").html("Menu");
+    $("#headerNav li:eq(1)").html("Home page");
+    $("#headerNav li:eq(2)").html("Skills");
+    $("#headerNav li:eq(3)").html("Projects");
+    $("#headerNav li:eq(4)").html("Contact");
+    $("#headerNav li:eq(5)").html("Links");
+
 
     $("#introduction p:eq(0)").html("Hi, my name is Tomek");
     $("#introduction p:eq(1)").html("I am IT student. My hobby is programming. In free time I publish my projects on this site.");
