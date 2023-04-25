@@ -229,10 +229,21 @@ function changeToPL(){
         return inside;
     });
 
-    $("#fifthProject p:eq(0)").html("Sudoku");
-    $("#fifthProject p:eq(1)").html("Sudoku zrealizowane w Java z interfejsem graficznym JavaFx.");
+    $("#sixthProject p:eq(0)").html("Sudoku");
+    $("#sixthProject p:eq(1)").html("Sudoku zrealizowane w Java z interfejsem graficznym JavaFx.");
     projInside = $("#sixthProject .techIcons").children();
     $("#sixthProject .techIcons").html(()=>{
+        let inside = "Technology:";
+        projInside.each((id,element)=>{
+            inside += element.outerHTML;
+        })
+        return inside;
+    });
+
+    $("#seventhProject p:eq(0)").html("Behawiorysta");
+    $("#seventhProject p:eq(1)").html("Strona informująca o usługach lokalnego behawiorysty psów.");
+    projInside = $("#seventhProject .techIcons").children();
+    $("#seventhProject .techIcons").html(()=>{
         let inside = "Technology:";
         projInside.each((id,element)=>{
             inside += element.outerHTML;
@@ -319,10 +330,21 @@ function changeToENG(){
         return inside;
     });
 
-    $("#fifthProject p:eq(0)").html("Sudoku");
-    $("#fifthProject p:eq(1)").html("Sudoku created with Java and JavaFx.");
+    $("#sixthProject p:eq(0)").html("Sudoku");
+    $("#sixthProject p:eq(1)").html("Sudoku created with Java and JavaFx.");
     projInside = $("#sixthProject .techIcons").children();
     $("#sixthProject .techIcons").html(()=>{
+        let inside = "Technology:";
+        projInside.each((id,element)=>{
+            inside += element.outerHTML;
+        })
+        return inside;
+    });
+
+    $("#seventhProject p:eq(0)").html("Behaviorist");
+    $("#seventhProject p:eq(1)").html("Site promotes services of local dog behaviourist from my hometown.");
+    projInside = $("#seventhProject .techIcons").children();
+    $("#seventhProject .techIcons").html(()=>{
         let inside = "Technology:";
         projInside.each((id,element)=>{
             inside += element.outerHTML;

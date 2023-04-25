@@ -1,42 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@media only screen and (max-width: 600px) {
+    :root{
+        /* --headerHeight: 200px; */
+        --headerComponentsWidth: 100%;
+        --headerDirection: column;
+        --changeLangWidth: 100%; 
+        --headerMenuHeight: 50px;
+
+        --siteWidth: 100vw;
+
+        --diagramsDirection: column;
+        --diagramsWidth: 60%;
+
+        /* --mainMargin: 200px; */
+        --mainMargin: 575px;
+    }
+    #diagrams{
+        align-items: center;
+    }
+}
+@media only screen and (min-width: 601px) {
+    :root{
+        --siteWidth: 100vw;
+        --diagramsDirection: column;
+        --diagramsWidth: 60%;
+        --diagramsPadding: 2%;
+    }
+    #diagrams{
+        align-items: center;
+    }
+}
+/* @media only screen and (min-width: 768px) {} */
+@media only screen and (min-width: 992px) {
+    :root{
+        --siteWidth: 960px;
+        --diagramsDirection: row;
+        --diagramsWidth: 100%;
+        --diagramsPadding: 14%;
+
+        --mainMargin: 200px;
+    }
+    #diagrams{
+        align-items: normal;
+    }
+}
+/* @media only screen and (min-width: 1200px) {} */
+/* @media only screen and (min-width: 1440px) {
+    :root{
+        --siteWidth: 960px;
+        
+    }
+} */
+/* @media only screen and (min-width: 1900px) {} */
+/* @media only screen and (min-width: 2300px) {} */
+/* @media only screen and (min-width: 2600px) {} */
+
 *{
-    margin: 0;
-    
+    margin: 0; 
 }
 html{
     scroll-behavior: smooth;
-
 }
 body{
     background-color: white;
     cursor: default;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    
 }
 header{
-    position: fixed;
-    height: 100px;
+    /* CHANGE HEIGHT */
+    /* height: 100px; */
+    /* height: var(--headerHeight); */
     width: 100%;
     background-color: #1b1b1b;
-    cursor: default;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: center;
+    /* DIRECTION */
+    flex-direction: var(--headerDirection);
     z-index: 3;
+    cursor: default;
 }
 #headerContainer{
-    width: 960px;
+    width: var(--siteWidth);
+    /* HEIGHT */
+    /* height: 150px; */
     display: flex;
     justify-content: center;
     align-items: center;
+    /* DIRECTION */
+    flex-direction: var(--headerDirection);
 }
 #logo{
     font-weight: 900;
     font-size: 40px;
     text-align: center;
-    height: 100%;
-    width: 25%;
+    /* HEIGHT */
+    /* height: 100%; */
+    /* height: 50%; */
+    /* WIDTH */
+    /* width: 25%; */
+    width: var(--headerComponentsWidth);
     color: white;
     display: flex;
     align-items: center;
@@ -48,18 +114,31 @@ header{
 #headerNav{
     font-weight: 900;
     font-size: 20px;
-    width: 75%;
-    height: 100%;
+    /* width: 75%; */
+    width: var(--headerComponentsWidth);
+    /* HEIGHT */
+    /* height: 100%; */
+    height: 
+    /* height: var(--headerMenuHeight); */
+    /* overflow: hidden; */
 }
 #headerNav ul{
-    height: 100%;
+    /* HEIGHT */
+    /* height: 100%; */
+    height: 450px;
+    /* height: 75px; */
     display: flex;
     padding: 0;
+    flex-direction: var(--headerDirection);
+    overflow: hidden;
 }
 #headerNav li{
     margin: 0 3px 0 3px;
-    height: 100%;
-    width: 20%;
+    /* HEIGHT */
+    /* height: 100%; */
+    min-height: 75px;
+    /* width: 20%; */
+    width: var(--headerComponentsWidth);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,8 +152,11 @@ header{
 }
 #changeLang{
     background-color:  rgb(112, 21, 21);
-    height: 100%;
-    width: 100px;
+    /* HEIGHT */
+    /* height: 100%; */
+    height: 50px;
+    /* WIDTH */
+    width: var(--changeLangWidth);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +176,7 @@ header{
     background-color: white;
 } */
 #main{
-    margin-top: 100px;
+    margin-top: var(--mainMargin);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -107,7 +189,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 960px;
+    width: var(--siteWidth);
 }
 #introduction div{
     width: 75%;
@@ -132,8 +214,8 @@ header{
     background-color: #540000;
 }
 #technologies{
-    height: 90vh;
-    width: 960px;
+    /* height: 90vh; */
+    width: var(--siteWidth);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,13 +229,16 @@ header{
 }
 #diagrams{
     display: flex;
-    flex-direction: row;
+    /* CHANGE DIRECTION */
+    flex-direction: var(--diagramsDirection);
     justify-content: center;
+    /* align-items: center; */
     margin: 0 2% 0 2%;
+    padding-bottom: 5%;
 }
 .techElement{
     position: relative;
-    width: 100%;
+    width: var(--diagramsWidth);
     margin: 5% 1% 0 1%;
     background-image: linear-gradient(to right, black, rgb(99, 0, 0));
     padding: 3px;
@@ -171,14 +256,14 @@ header{
     position: relative;
     width: 100%;
     height: 90%;
-    padding-top: 14%;
+    /* CHANGE PADDING N WIDTH */
+    padding-top: var(--diagramsPadding);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
     background-color: #ffffff;
-   
 }
 .mainDiagramDot{
     display: block;
@@ -198,6 +283,7 @@ header{
     height: 60px;
 }
 .webTech{
+    width: 80%;
     height: 100%;
 }
 .techList{
@@ -373,7 +459,7 @@ header{
 }
 #techSliderContainerBorder{
     z-index: 1;
-    width: 960px;
+    width: var(--siteWidth);
     padding: 5px;
     background-image: linear-gradient(to right, black, rgb(99, 0, 0));
 }
@@ -388,7 +474,7 @@ header{
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    width: 960px;
+    width: var(--siteWidth);
     background-image: linear-gradient(to right, #272727 ,#3f2d3a);
 
 }
@@ -424,7 +510,7 @@ a{
     color: black;
 }
 #contact{
-    width: 960px;
+    width: var(--siteWidth);
     height: 20vh;
     display: flex;
     flex-direction: column;
@@ -451,15 +537,15 @@ a{
     color: rgb(112, 21, 21);
 }
 #links{
-    width: 960px;
+    width: var(--siteWidth);
     height: 30vh;
 }
 #linksContainer{
+    height:50%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height:50%;
 }
 #linksContainer a:hover{
     transform: scale(1.1);
@@ -467,7 +553,6 @@ a{
 }
 
 footer{
-    
     height: 200px;
     width: 100%;
     background-color: #1b1b1b;
@@ -478,17 +563,17 @@ footer{
 }
 #footerContainer{
     height: 100%;
-    width: 960px;
+    width: var(--siteWidth);
     display: flex;
     flex-direction: row;
 }
 #socialMedia{
-    color: white;
     height: 100%;
     width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: white;
 }
 .contactElement{   
     margin-left: 20%;
@@ -511,14 +596,14 @@ footer{
     font-size: 13px;
 }
 .icon{
-    margin: 0 5px 0 5px;
     height: 25px;
     width: 90px;
-    border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0 5px 0 5px;
+    border-radius: 30px;
 }
 .iconJs{
     background-color: #F0EB8A;
@@ -564,7 +649,6 @@ footer{
     border: 0.1px solid;
 }
 .code{
-    margin: 5px 5px 5px 5px;
     height: 40px;
     width: 140px;
     border-radius: 30px;
@@ -573,6 +657,7 @@ footer{
     align-items: center;
     justify-content: center;
     border: 0.1px solid;
+    margin: 5px 5px 5px 5px;
 }
 .projectLinks a{
     position: absolute;
@@ -584,11 +669,11 @@ footer{
     font-weight: bold;
 }
 #goToTop{
-    color: white;
     position: fixed;
     right: 5%;
-    background-color: black;
-    z-index: 4;
     bottom: 5%;
+    background-color: black;
+    color: white;
+    z-index: 4;
     border-radius: 10px;
 }
