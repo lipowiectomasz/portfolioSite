@@ -13,8 +13,18 @@
         --diagramsDirection: column;
         --diagramsWidth: 60%;
 
-        --mainMargin: 200px;
+        --mainMargin: 0;
         /* --mainMargin: 575px; */
+
+        /* PROJECTS */
+        --leftBorderPosition: 13vw;
+        --rightBorderPosition: -7vw;
+        --projectContainerWidth: 90vw;
+
+        /* FOOTER VARS */
+        --footerDirection: column;
+        --socialMediaWidth: 100%;
+        --contactElementMargin: 25%; 
     }
     #diagrams{
         align-items: center;
@@ -22,10 +32,30 @@
 }
 @media only screen and (min-width: 601px) {
     :root{
+        --headerComponentsWidth: 100%;
+        --headerDirection: column;
+        --changeLangWidth: 100%; 
+        --headerMenuHeight: 50px;
+
         --siteWidth: 100vw;
+        
         --diagramsDirection: column;
         --diagramsWidth: 60%;
         --diagramsPadding: 2%;
+
+        --mainMargin: 0;
+        /* --mainMargin: 575px; */
+
+        /* PROJECTS */
+        --leftBorderPosition: 13vw;
+        --rightBorderPosition: -7vw;
+        --projectContainerWidth: 90vw;
+
+        /* FOOTER VARS */
+        --footerDirection: column;
+        --socialMediaWidth: 100%;
+        --contactElementMargin: 25%; 
+
     }
     #diagrams{
         align-items: center;
@@ -34,12 +64,32 @@
 /* @media only screen and (min-width: 768px) {} */
 @media only screen and (min-width: 992px) {
     :root{
+        /* HEADER */
+        --headerComponentsWidth: 20%;
+        --headerNavWidth: 100%;
+        --headerDirection: row;
+        --headerContainerWidth: 90%;
+        --changeLangWidth: 10%; 
+        --headerMenuHeight: 50px;
+
+        /* MAIN */
         --siteWidth: 960px;
         --diagramsDirection: row;
         --diagramsWidth: 100%;
         --diagramsPadding: 14%;
 
         --mainMargin: 200px;
+
+        
+        /* PROJECTS */
+        --leftBorderPosition: 13vw;
+        --rightBorderPosition: -7vw;
+        --projectContainerWidth: 960px;
+
+        /* FOOTER VARS */
+        --footerDirection: row;
+        --socialMediaWidth: 100%;
+        --contactElementMargin: 25%; 
     }
     #diagrams{
         align-items: normal;
@@ -83,8 +133,14 @@ header{
     z-index: 3;
     cursor: default;
 }
-#headerContainer{
+header > div{
     width: var(--siteWidth);
+    display: flex;
+    flex-direction: var(--headerDirection);
+}
+#headerContainer{
+    width: var(--headerContainerWidth);
+    /* width: 100%; */
     /* HEIGHT */
     /* height: 150px; */
     display: flex;
@@ -115,10 +171,10 @@ header{
     font-weight: 900;
     font-size: 20px;
     /* width: 75%; */
-    width: var(--headerComponentsWidth);
+    width: var(--headerNavWidth);
     /* HEIGHT */
     /* height: 100%; */
-    height: 
+    /* height:  */
     /* height: var(--headerMenuHeight); */
     /* overflow: hidden; */
 }
@@ -154,7 +210,7 @@ header{
     background-color:  rgb(112, 21, 21);
     /* HEIGHT */
     /* height: 100%; */
-    height: 50px;
+    height: 75px;
     /* WIDTH */
     width: var(--changeLangWidth);
     display: flex;
@@ -182,7 +238,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 #introduction{
     color: black;
@@ -234,8 +290,9 @@ header{
     flex-direction: var(--diagramsDirection);
     justify-content: center;
     /* align-items: center; */
-    margin: 0 2% 0 2%;
+    /* margin: 0 2% 0 2%; */
     padding-bottom: 5%;
+    box-sizing: content-box;
 }
 .techElement{
     position: relative;
@@ -320,25 +377,28 @@ header{
 }
 .projectLeftBorder{
     position: relative;
-    left: -30%;
+    /* left: -30%; */
+    
+    right: var(--leftBorderPosition);
     background-image: linear-gradient(to right, black, rgb(99, 0, 0));
     padding: 3px;
     border-radius: 35px;
     margin-top: 3%;
     box-shadow: 5px 5px 20px gray;
-    width: 100%;
+    width: 105vw;
     /* overflow: hidden; */
 }
 
 .projectRightBorder{
     position: relative;
-    right: -30%;
+    /* right: -30%; */
+    right: var(--rightBorderPosition);
     background-image: linear-gradient(to right, black, rgb(99, 0, 0));
     padding: 3px;
     border-radius: 35px;
     margin-top: 3%;
     box-shadow: 5px 5px 20px gray;
-    width: 150%;
+    width: 105vw;
     /* overflow: hidden; */
 }
 .projectLeft{
@@ -356,7 +416,8 @@ header{
     justify-content: left;
 }
 .projectContainer{
-    width: 700px;
+    /* width: 700px; */
+    width: var(--projectContainerWidth);
     height: 90%;
     margin: 10px;
     display: flex;
@@ -377,15 +438,30 @@ header{
 }
 #projectPhotoContainer{
     position: relative;
-    height: 434px;
-    width: 500px;
+    width: 100%;
+    height: 270px;
+    /* height: 100%; */
+    /* width: 500px; */
 }
 .projectPhoto{
-    position: relative;
-    height: 384px;
-    width: 450px;
+    /* display: inline; */
+    /* position: relative; */
+    display:flex;
+    justify-content: center;
+    width: 100%;
     transition: transform 1s;
 	transform-style: preserve-3d;
+}
+.projectPhoto img{
+    max-height: 270px;
+}
+.projectImage{
+    display: flex;
+    justify-content: center;
+}
+.projectImage > img{
+    width: 85%;
+    height: auto;
 }
 .projectPhoto.projectPhotoFlip{
     transform: rotateY(180deg);
@@ -410,7 +486,7 @@ header{
     display: flex;
     justify-content: center;
     z-index: 2;
-    bottom: 70px;
+    bottom: 0;
 }
 .projectPhotoDotPointerContainer{
     position: relative;
@@ -552,33 +628,6 @@ a{
     transform: scale(1.1);
     color:  rgb(112, 21, 21);
 }
-
-footer{
-    height: 200px;
-    width: 100%;
-    background-color: #1b1b1b;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-#footerContainer{
-    height: 100%;
-    width: var(--siteWidth);
-    display: flex;
-    flex-direction: row;
-}
-#socialMedia{
-    height: 100%;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-}
-.contactElement{   
-    margin-left: 20%;
-}
 .contactElement a{
     color: white;
 }   
@@ -592,9 +641,11 @@ footer{
 }
 .techIcons{
     display: flex;
+    justify-content: center;
     flex-direction: row;
     margin: 20px 0 20px 0;
     font-size: 13px;
+    width: 95%;
 }
 .icon{
     height: 25px;
@@ -669,6 +720,34 @@ footer{
     color:  rgb(112, 21, 21);
     font-weight: bold;
 }
+footer{
+    height: 200px;
+    width: 100%;
+    background-color: #1b1b1b;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#footerContainer{
+    height: 100%;
+    width: var(--siteWidth);
+    display: flex;
+    flex-direction: var(--footerDirection);
+}
+#socialMedia{
+    height: 100%;
+    /* width: 70%; */
+    width: var(--socialMediaWidth);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.contactElement{   
+    /* margin-left: 20%; */
+    margin-left: var(--contactElementMargin);
+}
 #goToTop{
     position: fixed;
     right: 5%;
@@ -677,4 +756,10 @@ footer{
     color: white;
     z-index: 4;
     border-radius: 10px;
+    transform: scale(1);
+    transition: 0.5s;
+}
+#goToTop:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
 }
