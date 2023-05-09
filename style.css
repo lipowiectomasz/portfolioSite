@@ -60,6 +60,7 @@
     #diagrams{
         align-items: center;
     }
+
 }
 /* @media only screen and (min-width: 768px) {} */
 @media only screen and (min-width: 992px) {
@@ -93,6 +94,9 @@
     }
     #diagrams{
         align-items: normal;
+    }
+    #headerNav li:nth-child(1){
+        display: none;
     }
 }
 /* @media only screen and (min-width: 1200px) {} */
