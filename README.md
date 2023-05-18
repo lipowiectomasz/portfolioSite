@@ -1,3 +1,7 @@
-Portfolio site with my current progress.
+# Portfolio site
 
-https://tomlip.pl
+Place where I publish my current progress and demos of applications.
+
+### https://tomlip.pl
+
+Written in HTML, CSS, jQuery
